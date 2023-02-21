@@ -1,3 +1,5 @@
+import {isNotNull} from "@softwareventures/nullable";
+
 /** Union of all types that can be used as the key for property access.
  *
  * The type of `x` in the expression `o[x]` (for arbitrary `o`).
@@ -124,11 +126,7 @@ export function filterFn<T>(
 export function excludeNull<T>(
     dictionary: Readonly<Record<string, T | undefined | null>>
 ): Record<string, T> {
-    return filter(dictionary, notNull);
-}
-
-function notNull<T>(value: T | undefined | null): value is T {
-    return value != null;
+    return filter(dictionary, isNotNull);
 }
 
 export function forEach<T>(
