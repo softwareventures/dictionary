@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@softwareventures/nullable": "^3.1.0",
-    "tslib": "2.6.2"
+    "tslib": "2.6.3"
   },
   "devDependencies": {
     "@softwareventures/eslint-config": "7.6.0",
